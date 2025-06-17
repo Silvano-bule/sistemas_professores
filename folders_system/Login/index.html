@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
 </head>
 <body class="bg-primary">
 
@@ -12,26 +13,26 @@
         <div class="row border-primary shadow rounded overflow-hidden" style="max-width: 900px;">
 
             <div class="col-md-6 d-flex flex-column justify-content-center align-items-center p-4 bg-white">
-                <img src="../../folders_system/img/undraw_access-account_aydp.png" class="img-fluid mb-3" alt="Seja bem-vindo" style="width: 300px;">
+                <img src="../../folders_system/img/login.png" class="img-fluid mb-3" alt="Seja bem-vindo" style="width: 200px;">
                 <h2 class="text-center text-primary">Bem vindo ao sistema</h2>
                 <p class="text-center text-muted">Faça seu cadastro de forma rápida e prática. Estamos felizes por você estar aqui!</p>
             </div>
 
             <div class="col-md-6 p-4 d-flex flex-column justify-content-center p-4 bg-light">
-                <h3 class="mb-3 text-center">Formulario de cadastro</h3>
+                <h3 class="mb-3 text-center">Entrar</h3>
                 <form action="">
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="email" placeholder="Digite o seu email">
+                        <input type="email" class="form-control" id="email" placeholder="Digite o seu email" required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="password" placeholder="Digite sua Senha">
+                        <input type="password" class="form-control" id="password" placeholder="Digite sua Senha" required>
                     </div>
                 </form>
-                <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+                <button type="submit" class="btn btn-primary w-100">Entrar</button>
                 <a href="#" class="text-primary text-center my-2 text-decoration-none">Esqueci minha senha</a>
-                <a href="#" class="text-primary text-center my-2 text-decoration-none">Não possui conta? <span class="text-secondary">Crie uma conta agora</span></a>
+                <a href="../../index.html" class="text-primary text-center my-2 text-decoration-none">Não possui conta? <span class="text-secondary">Crie uma conta agora</span></a>
             </div>
         </div>
     </div>
