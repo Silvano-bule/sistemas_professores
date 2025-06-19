@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../css/bootstrap.min.css">
     <link rel="stylesheet" href="./../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -32,12 +33,15 @@
                                 <h3 class="text-start my-5 mx-4 text-secondary">Seja bem vindo Nome do professor</h3>
                             </div>
                             <div class="perfil d-flex gap-3 align-items-center">
-                                <div class="imagem ">
-                                    <img src="../../img/perfilUser.jpg" alt="perfilUser"
-                                        style="width: 70px; height: 70px; object-fit: cover; border-radius: 100%;">
+                                <div class="imagemUser" onclick="document.getElementById('selectoImagem').click();">
+                                    <img src="../../img/defaultImage.png" class="imagem foto-perfil" alt="perfilUser"
+                                        style="width: 70px; height: 70px; object-fit: cover; border-radius: 100%;"
+                                        id="fotoPerfil">
                                 </div>
+                                <input type="file" accept="image/*" id="selectoImagem">
                                 <div class="nomeUser">
                                     <p>Nome do usuario</p>
+                                    <button class="btn btn-primary" onclick="salvarImagem()">Salvar</button>
                                 </div>
                             </div>
                         </div>
@@ -108,10 +112,10 @@
                             </div>
                         </div>
                         <div class="box border border-primary rounded-4 p-3 col-md-3">
-                            <div class="imageUser">
-                                <img src="../../img/perfilUser.jpg" alt="perfil User"
-                                    style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; "
-                                    class="mx-auto d-block">
+                            <div class="imagemUser">
+                                <img src="../../img/defaultImage.png" class="imagem foto-perfil" alt="perfilUser"
+                                    style="width: 70px; height: 70px; object-fit: cover; border-radius: 100%;"
+                                    id="fotoPerfil">
                             </div>
                             <div class="biografiaUser d-flex flex-column justify-content-center align-items-center">
                                 <div class="nameUser">
@@ -138,8 +142,8 @@
                     </div>
                 </div>
                 <div class="container my-5">
-                    <div class="btn btn-primary py-3 px-5">
-                        Minhas Turmas
+                    <div class="btn btn-primary py-3 px-5" >
+                        <a href="../turmas_professor/index.html" class="text-white" style="text-decoration: none;">Minhas Turmas</a>
                     </div>
                     <div class="btn btn-primary py-3 px-5">
                         Lançar Notas
@@ -147,13 +151,32 @@
                     <div class="btn btn-primary py-3 px-5">
                         Adicionar matéria
                     </div>
-                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de Sucesso -->
+    <div class="modal fade" id="modalSucesso" tabindex="-1" aria-labelledby="modalSucessoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="modalSucessoLabel">Sucesso!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    A foto de perfil foi atualizada com sucesso!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="../../../js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
