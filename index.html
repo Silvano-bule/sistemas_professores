@@ -30,12 +30,12 @@
 <body class="bg-light">
 
 <div class="container py-5">
-  <div class="card shadow">
+  <div class="card shazdow">
     <div class="card-body">
-      <h3 class="text-center mb-4">Cadastro em Etapas</h3>
+      <h3 class="text-center mb-4">Cadastro</h3>
 
       <form id="formCadastro">
-        <div id="carouselForm" class="carousel slide" data-bs-interval="false">
+        <div id="carouselForm" class="carousel slide">
           <div class="carousel-inner">
 
             <!-- Etapa 1 -->
@@ -56,7 +56,7 @@
                     <input type="email" class="form-control" id="email" required>
                   </div>
                   <div class="text-end">
-                    <button type="button" class="btn btn-primary" data-bs-target="#carouselForm" data-bs-slide="next">Avançar</button>
+                    <button type="button" class="btn btn-primary"  id="avancarEtapa1">Avançar</button>
                   </div>
                 </div>
                 <a href="folders_system/Login/index.html" class="text-primary text-center my-2 text-decoration-none">Já possui conta? <span class="text-secondary">Faça Login</span></a>
@@ -86,7 +86,7 @@
                   </div>
                   <div class="d-flex justify-content-between">
                     <button type="button" class="btn btn-secondary" data-bs-target="#carouselForm" data-bs-slide="prev">Voltar</button>
-                    <button type="button" class="btn btn-primary" data-bs-target="#carouselForm" data-bs-slide="next">Avançar</button>
+                    <button type="button" class="btn btn-primary"  id="avancarEtapa2">Avançar</button>
                   </div>
                 </div>
               </div>
@@ -111,7 +111,7 @@
                   </div>
                   <div class="d-flex justify-content-between">
                     <button type="button" class="btn btn-secondary" data-bs-target="#carouselForm" data-bs-slide="prev">Voltar</button>
-                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                    <button type="submit" id="btnCadastrar" class="btn btn-success">Cadastrar</button>
                   </div>
                 </div>
               </div>
@@ -125,14 +125,9 @@
 </div>
 
 <!-- Bootstrap Bundle JS (com Carousel incluído) -->
-<script src="../../js/bootstrap.bundle.min.js"></script>
-<script>
-  document.getElementById('formCadastro').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert("✅ Cadastro realizado com sucesso!");
-    // Aqui pode enviar os dados ou redirecionar
-  });
-</script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
 
 </body>
 </html>
